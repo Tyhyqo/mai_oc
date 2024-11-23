@@ -1,10 +1,16 @@
 cmake_minimum_required(VERSION 3.10)
 
 # Set the project name
-project(TestProject)
+project(lab_2_main C)
+
+# Set the C standard
+set(CMAKE_C_STANDARD 99)
 
 # Add the executable
-add_executable(test test.c)
+add_executable(main main.c)
+
+# Link pthread library
+target_link_libraries(main pthread)
 
 # Enable ThreadSanitizer
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fsanitize=thread")
