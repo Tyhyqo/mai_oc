@@ -1,0 +1,97 @@
+execve("./parent", ["./parent"], 0x7ffce8b75490 /* 36 vars */) = 0
+brk(NULL)                               = 0x55dabbcc5000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffcebdc67e0) = -1 EINVAL (Invalid argument)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f13bfb72000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=26839, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 26839, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f13bfb6b000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0I\17\357\204\3$\f\221\2039x\324\224\323\236S"..., 68, 896) = 68
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f13bf942000
+mprotect(0x7f13bf96a000, 2023424, PROT_NONE) = 0
+mmap(0x7f13bf96a000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7f13bf96a000
+mmap(0x7f13bfaff000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7f13bfaff000
+mmap(0x7f13bfb58000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7f13bfb58000
+mmap(0x7f13bfb5e000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f13bfb5e000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f13bf93f000
+arch_prctl(ARCH_SET_FS, 0x7f13bf93f740) = 0
+set_tid_address(0x7f13bf93fa10)         = 8844
+set_robust_list(0x7f13bf93fa20, 24)     = 0
+rseq(0x7f13bf9400e0, 0x20, 0, 0x53053053) = 0
+mprotect(0x7f13bfb58000, 16384, PROT_READ) = 0
+mprotect(0x55da9752a000, 4096, PROT_READ) = 0
+mprotect(0x7f13bfbac000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x7f13bfb6b000, 26839)           = 0
+unlink("/dev/shm/sem.sem_parent_child1") = -1 ENOENT (No such file or directory)
+unlink("/dev/shm/sem.sem_child1_child2") = -1 ENOENT (No such file or directory)
+unlink("/dev/shm/sem.sem_child2_parent") = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/dev/shm/sem.sem_parent_child1", O_RDWR|O_NOFOLLOW) = -1 ENOENT (No such file or directory)
+getrandom("\xf5\xc8\xfb\xab\xf5\x69\xa9\x28", 8, GRND_NONBLOCK) = 8
+newfstatat(AT_FDCWD, "/dev/shm/sem.fCmdn2", 0x7ffcebdc60f0, AT_SYMLINK_NOFOLLOW) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/dev/shm/sem.fCmdn2", O_RDWR|O_CREAT|O_EXCL, 0666) = 3
+write(3, "\0\0\0\0\0\0\0\0\200\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0", 32) = 32
+mmap(NULL, 32, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0x7f13bfbab000
+link("/dev/shm/sem.fCmdn2", "/dev/shm/sem.sem_parent_child1") = 0
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=32, ...}, AT_EMPTY_PATH) = 0
+getrandom("\xd5\x06\x53\x4a\xab\xe8\x8a\x41", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x55dabbcc5000
+brk(0x55dabbce6000)                     = 0x55dabbce6000
+unlink("/dev/shm/sem.fCmdn2")           = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/dev/shm/sem.sem_child1_child2", O_RDWR|O_NOFOLLOW) = -1 ENOENT (No such file or directory)
+getrandom("\x03\x8d\x4d\x2a\xbb\x4c\x13\xdf", 8, GRND_NONBLOCK) = 8
+newfstatat(AT_FDCWD, "/dev/shm/sem.FeDD8R", 0x7ffcebdc60f0, AT_SYMLINK_NOFOLLOW) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/dev/shm/sem.FeDD8R", O_RDWR|O_CREAT|O_EXCL, 0666) = 3
+write(3, "\0\0\0\0\0\0\0\0\200\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0", 32) = 32
+mmap(NULL, 32, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0x7f13bfb71000
+link("/dev/shm/sem.FeDD8R", "/dev/shm/sem.sem_child1_child2") = 0
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=32, ...}, AT_EMPTY_PATH) = 0
+unlink("/dev/shm/sem.FeDD8R")           = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/dev/shm/sem.sem_child2_parent", O_RDWR|O_NOFOLLOW) = -1 ENOENT (No such file or directory)
+getrandom("\x51\xbd\x7e\x8d\x21\xc1\x79\xfd", 8, GRND_NONBLOCK) = 8
+getrandom("\x1b\xbb\x0f\xa1\xee\x8a\x4b\xe3", 8, GRND_NONBLOCK) = 8
+newfstatat(AT_FDCWD, "/dev/shm/sem.lYlL3I", 0x7ffcebdc60f0, AT_SYMLINK_NOFOLLOW) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/dev/shm/sem.lYlL3I", O_RDWR|O_CREAT|O_EXCL, 0666) = 3
+write(3, "\0\0\0\0\0\0\0\0\200\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0", 32) = 32
+mmap(NULL, 32, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0x7f13bfb70000
+link("/dev/shm/sem.lYlL3I", "/dev/shm/sem.sem_child2_parent") = 0
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=32, ...}, AT_EMPTY_PATH) = 0
+unlink("/dev/shm/sem.lYlL3I")           = 0
+close(3)                                = 0
+unlink("/dev/shm/shared_mem")           = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/dev/shm/shared_mem", O_RDWR|O_CREAT|O_NOFOLLOW|O_CLOEXEC, 0666) = 3
+ftruncate(3, 1024)                      = 0
+mmap(NULL, 1024, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0x7f13bfb6f000
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f13bf93fa10) = 8845
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f13bf93fa10) = 8846
+newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x4), ...}, AT_EMPTY_PATH) = 0
+newfstatat(0, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x4), ...}, AT_EMPTY_PATH) = 0
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \321\201\321\202\321\200\320\276\320\272\321\203: ", 29) = 29
+read(0, ";asfha;fh  hehw uih3ih2r3h 21810"..., 1024) = 104
+futex(0x7f13bfbab000, FUTEX_WAKE, 1)    = 1
+write(1, "\320\240\320\265\320\267\321\203\320\273\321\214\321\202\320\260\321\202: ;ASFHA;FH__H"..., 124) = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=8845, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+write(1, "\320\240\320\265\320\267\321\203\320\273\321\214\321\202\320\260\321\202: ;ASFHA;FH__H"..., 124) = 124
+wait4(-1, NULL, 0, NULL)                = 8845
+wait4(-1, NULL, 0, NULL)                = 8846
+munmap(0x7f13bfb6f000, 1024)            = 0
+close(3)                                = 0
+unlink("/dev/shm/shared_mem")           = 0
+munmap(0x7f13bfbab000, 32)              = 0
+munmap(0x7f13bfb71000, 32)              = 0
+munmap(0x7f13bfb70000, 32)              = 0
+unlink("/dev/shm/sem.sem_parent_child1") = 0
+unlink("/dev/shm/sem.sem_child1_child2") = 0
+unlink("/dev/shm/sem.sem_child2_parent") = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
